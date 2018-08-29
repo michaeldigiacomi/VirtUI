@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SysinfoComponent } from './sysinfo/sysinfo.component';
+import { UiModule } from './ui/ui.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { SysinfoComponent } from './sysinfo/sysinfo.component';
     SysinfoComponent
   ],
   imports: [
-    BrowserModule, NgbModule, HttpClientModule
+    BrowserModule, NgbModule, HttpClientModule, UiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
