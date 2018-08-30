@@ -1,11 +1,184 @@
-<p>
-  sysinfo works!
-</p>
+<h1 class="display-1 mb-3" style="font-size: 32px;">Server Info</h1>
 
-<div *ngIf="sysInfoData">
-  <ul>
-    <li>
-      <span>{{sysInfoData.system.manufacturer}}</span>
-    </li>
-  </ul>
+<div class="card-deck">
+  <div class="row col-sm-12 mb-3">
+    <div class="card col-sm-4">
+      <div class="card-body">
+        <h5 class="card-title">System</h5>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">Manufacturer</th>
+              <td>{{sysInfoData.system.manufacturer}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Product</th>
+              <td>{{sysInfoData.system.product}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Version</th>
+              <td>{{sysInfoData.system.version}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Serial</th>
+              <td>{{sysInfoData.system.serial}}</td>
+            </tr>
+            <tr>
+              <th scope="row">uuid</th>
+              <td>{{sysInfoData.system.uuid}}</td>
+            </tr>
+            <tr>
+              <th scope="row">sku</th>
+              <td>{{sysInfoData.system.sku}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Fanily</th>
+              <td>{{sysInfoData.system.family}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <div class="card col-sm-4">
+      <div class="card-body">
+        <h5 class="card-title">BaseBoard</h5>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">Manufacturer</th>
+              <td>{{sysInfoData.baseboard.manufacturer}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Product</th>
+              <td>{{sysInfoData.baseboard.product}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Version</th>
+              <td>{{sysInfoData.baseboard.version}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Serial</th>
+              <td>{{sysInfoData.baseboard.serial}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Asset</th>
+              <td>{{sysInfoData.baseboard.asset}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Location</th>
+              <td>{{sysInfoData.baseboard.location}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card col-sm-4">
+      <div class="card-body">
+        <h5 class="card-title">Bios</h5>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">vendor</th>
+              <td>{{sysInfoData.bios.vendor}}</td>
+            </tr>
+            <tr>
+              <th scope="row">version</th>
+              <td>{{sysInfoData.bios.version}}</td>
+            </tr>
+            <tr>
+              <th scope="row">date</th>
+              <td>{{sysInfoData.bios.date}}</td>
+            </tr>
+            <tr>
+              <th scope="row">release</th>
+              <td>{{sysInfoData.bios.release}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row col-sm-12  mb-3">
+    <div class="card col-sm-6" *ngFor="let proc of sysInfoData.processor">
+      <div class="card-body">
+        <h5 class="card-title">Processor</h5>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">Socket</th>
+              <td>{{proc.socket_destination}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Type</th>
+              <td>{{proc.type}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Family</th>
+              <td>{{proc.family}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Manufacturer</th>
+              <td>{{proc.manufacturer}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Signature</th>
+              <td>{{proc.signature}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Version</th>
+              <td>{{proc.version}}</td>
+            </tr>
+            <tr>
+              <th scope="row">External Clock</th>
+              <td>{{proc.external_clock}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Max Speed</th>
+              <td>{{proc.max_speed}}</td>
+            </tr>
+            <tr>
+              <th scope="row">status</th>
+              <td>{{proc.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-sm-12  mb-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Processor</h5>
+        <table class="table">
+          <thead>
+            <th scope="col">Manufacturer</th>
+            <th scope="col">Size</th>
+            <th scope="col">Speed</th>
+            <th scope="col">Location</th>
+            <th scope="col">Serial</th>
+            <th scope="col">Part Number</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mem of sysInfoData.memory">
+              <td>{{mem.manufacturer}}</td>
+              <td>{{mem.size}}</td>
+              <td>{{mem.speed}}</td>
+              <td>{{mem.locator}}</td>
+              <td>{{mem.serial_number}}</td>
+              <td>{{mem.part_number}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
