@@ -1,0 +1,29 @@
+<h1 class="display-1 mb-3" style="font-size: 32px;">Vm Status</h1>
+
+<button type="button" class="btn btn-primary mb-3">Create</button>
+
+<div class="card-deck">
+  <div class="row col-sm-12  mb-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Processor</h5>
+        <table class="table">
+          <thead>
+            <th scope="col">Select</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let domains of domainlistData">
+              <td><a href="/domain/{{domains.id}}">Select</a></td>
+              <td>{{domains.id}}</td>
+              <td>{{domains.name}}</td>
+              <td>{{domains.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

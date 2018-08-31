@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SysinfoService } from './sysinfo.service';
 
-
 @Component({
   selector: 'app-sysinfo',
   templateUrl: './sysinfo.component.html',

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SysinfoComponent } from './sysinfo/sysinfo.component';
 
 
 @Component({
