@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  VirshLibServer: 'http://home.hipsterconsulting.com:5000/'
+  VirshLibServer: 'http://localhost:5000/'
 };
 
 /*

@@ -13,7 +13,7 @@ export class DomainlistComponent implements OnInit {
   constructor(private svc: DomainlistService) {}
 
   ngOnInit() {
-    this.svc.getSysInfo().subscribe(data => {
+    this.svc.getDomList().subscribe(data => {
       this.domainlistData = data;
     });
   }

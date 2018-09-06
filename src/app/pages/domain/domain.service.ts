@@ -4,17 +4,16 @@ import { Observable } from 'rxjs';
 
 import { environment } from '../../../environments/environment';
 
-
 @Injectable({
   providedIn: 'root'
 })
-export class DomainlistService {
+export class DomainService {
 
-  private url = environment.VirshLibServer + 'api/domain';
+  private url = environment.VirshLibServer + 'api/Domain/';
 
   constructor(private http: HttpClient) {}
 
-  getDomList(): Observable<any> {
-    return this.http.get<any>(this.url);
+  getDomInfo(id): Observable<any> {
+    return this.http.get<any>(this.url + id);
   }
 }

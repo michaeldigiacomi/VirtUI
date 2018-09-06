@@ -1,3 +1,86 @@
-<p>
-  domain works!
-</p>
+<h1 class="display-1 mb-3" style="font-size: 32px;">{{domainoData.Name}} Info</h1>
+
+<div class="card-deck">
+  <div class="row col-sm-12 mb-3">
+    <div class="card col-sm-6">
+      <div class="card-body">
+        <h5 class="card-title">Info</h5>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">ID</th>
+              <td>{{domainoData.Id}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Name</th>
+              <td>{{domainoData.Name}}</td>
+            </tr>
+            <tr>
+              <th scope="row">OS</th>
+              <td>{{domainoData.OSType}}</td>
+            </tr>
+            <tr>
+              <th scope="row">State</th>
+              <td>{{domainoData.State}}</td>
+            </tr>
+            <tr>
+              <th scope="row">CPU(s)</th>
+              <td>{{domainoData.CPUs}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card col-sm-6">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">Max Memory</th>
+              <td>{{domainoData.Maxmemory}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Persistent</th>
+              <td>{{domainoData.Persistent}}</td>
+            </tr>
+            <tr>
+              <th scope="row">AutoStart</th>
+              <td>{{domainoData.Autostart}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Managed Save</th>
+              <td>{{domainoData.Managedsave}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Security</th>
+              <td>{{domainoData.Securitymodel}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-sm-12 mb-3">
+    <div class="card col-sm-12">
+      <div class="card-body">
+        <h5 class="card-title">Actions</h5>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row"><button type="button" class="btn btn-success">Start</button></th>
+              <th scope="row"><button type="button" class="btn btn-danger">Shutdown</button></th>
+              <th scope="row"><button type="button" class="btn btn-warning">Suspend</button></th>
+              <th scope="row"><button type="button" class="btn btn-info">Force Shutdown</button></th>
+              <th scope="row"><button type="button" class="btn btn-info">Force Reset</button></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
