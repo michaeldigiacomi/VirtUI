@@ -9,11 +9,17 @@ import { environment } from '../../../environments/environment';
 })
 export class DomainService {
 
-  private url = environment.VirshLibServer + 'api/Domain/';
+  private getDomInfourl = environment.VirshLibServer + 'api/Domain/';
+  private updateDomainStateurl = environment.VirshLibServer + 'api/DomainState/';
+
 
   constructor(private http: HttpClient) {}
 
   getDomInfo(id): Observable<any> {
-    return this.http.get<any>(this.url + id);
+    return this.http.get<any>(this.getDomInfourl + id);
+  }
+
+  updateDomainState(id, state): Observable<any> {
+    return this.http.get<any>(this.updateDomainStateurl + id + '/' + state);
   }
 }
